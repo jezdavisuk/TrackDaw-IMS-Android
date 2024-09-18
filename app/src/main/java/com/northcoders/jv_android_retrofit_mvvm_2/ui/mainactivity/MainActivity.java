@@ -1,4 +1,4 @@
-package com.northcoders.jv_android_retrofit_mvvm_2;
+package com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.northcoders.jv_android_retrofit_mvvm_2.R;
 
 public class MainActivity extends AppCompatActivity {
 
