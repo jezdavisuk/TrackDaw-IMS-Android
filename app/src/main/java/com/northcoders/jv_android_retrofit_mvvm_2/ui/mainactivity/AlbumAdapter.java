@@ -35,11 +35,13 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
                         false);
 
         return new AlbumViewHolder(binding);
-
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AlbumViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AlbumViewHolder viewHolder, int position) {
+
+        Album album = albums.get(position);
+        viewHolder.albumItemBinding.setAlbum(album);
 
     }
 
