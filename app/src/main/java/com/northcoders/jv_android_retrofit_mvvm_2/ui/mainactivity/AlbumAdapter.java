@@ -1,10 +1,18 @@
 package com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity;
 
+import android.content.Context;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.northcoders.jv_android_retrofit_mvvm_2.databinding.AlbumItemBinding;
+import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
 
-public class AlbumAdapter extends RecyclerView.Adapter<> {
+import java.util.ArrayList;
+
+public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHolder> {
+
+    private Context context;
+    private ArrayList<Album> albums;
 
     public static class AlbumViewHolder extends RecyclerView.ViewHolder {
 
