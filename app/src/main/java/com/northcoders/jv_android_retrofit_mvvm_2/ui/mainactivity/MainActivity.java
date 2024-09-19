@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.northcoders.jv_android_retrofit_mvvm_2.R;
@@ -42,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         viewModel = new ViewModelProvider(this)
                 .get(MainActivityViewModel.class);
 
-
         getAllAlbums();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -63,10 +63,22 @@ public class MainActivity extends AppCompatActivity {
                 albums = (ArrayList<Album>) albumsFromLiveData;
 
                 // This method will be created next
-                displayInRecyclerView();
+                displayAlbumsInRecyclerView();
             }
 
         });
 
+    }
+
+    private void displayAlbumsInRecyclerView() {
+
+        recyclerView = binding.recyclerView;
+        albumAdapter = new AlbumAdapter(this, albums);
+        recyclerView.setAdapter(albumAdapter);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+
+        albumAdapter.notifyDataSetChanged();
     }
 }
