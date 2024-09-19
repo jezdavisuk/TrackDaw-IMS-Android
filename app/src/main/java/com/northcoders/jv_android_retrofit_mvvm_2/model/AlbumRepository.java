@@ -2,6 +2,7 @@ package com.northcoders.jv_android_retrofit_mvvm_2.model;
 
 import android.app.Application;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.lifecycle.MutableLiveData;
 
@@ -57,12 +58,17 @@ public class AlbumRepository {
 
             @Override
             public void onResponse(Call<Album> call, Response<Album> response) {
-
+                Toast.makeText(application.getApplicationContext(),
+                        "Album added to database.",
+                        Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailure(Call<Album> call, Throwable t) {
-
+                Toast.makeText(application.getApplicationContext(),
+                        "Unable to add album to database.",
+                        Toast.LENGTH_SHORT).show();
+                Log.e("POST REQ", Objects.requireNonNull(t.getMessage()));
             }
 
         });
