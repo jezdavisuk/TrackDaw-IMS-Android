@@ -7,10 +7,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.northcoders.jv_android_retrofit_mvvm_2.R;
+import com.northcoders.jv_android_retrofit_mvvm_2.databinding.ActivityMainBinding;
+import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    private RecyclerView recyclerView;
+    private ArrayList<Album> albums;
+    private AlbumAdapter albumAdapter;
+    private ActivityMainBinding binding;
+    private MainActivityViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
