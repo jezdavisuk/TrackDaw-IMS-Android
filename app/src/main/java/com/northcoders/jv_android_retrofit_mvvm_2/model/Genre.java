@@ -1,5 +1,6 @@
 package com.northcoders.jv_android_retrofit_mvvm_2.model;
 
+
 public enum Genre {
     ALTERNATIVE,
     BLUES,
@@ -21,3 +22,5 @@ public enum Genre {
     TRANCE,
     WORLD
 }
+
+

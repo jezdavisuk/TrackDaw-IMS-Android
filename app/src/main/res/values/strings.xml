@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">jv-android-retrofit-mvvm-2</string>
+    <string name="add_album">Add an album</string>
+    <string name="back_button">Back button</string>
 </resources>
