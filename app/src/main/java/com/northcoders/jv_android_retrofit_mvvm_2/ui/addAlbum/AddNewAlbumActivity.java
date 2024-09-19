@@ -9,8 +9,14 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.northcoders.jv_android_retrofit_mvvm_2.R;
+import com.northcoders.jv_android_retrofit_mvvm_2.databinding.ActivityAddNewAlbumBinding;
+import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
 
 public class AddNewAlbumActivity extends AppCompatActivity {
+
+    private ActivityAddNewAlbumBinding binding;
+    private AddAlbumClickHandlers handler;
+    private Album album;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
