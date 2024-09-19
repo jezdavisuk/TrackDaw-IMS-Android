@@ -47,4 +47,9 @@ public class AlbumRepository {
         return mutableLiveData;
 
     }
+
+    public void addNewAlbum(Album album) {
+
+
+    }
 }
