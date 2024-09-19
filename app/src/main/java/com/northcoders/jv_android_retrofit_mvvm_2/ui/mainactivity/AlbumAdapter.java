@@ -1,9 +1,14 @@
 package com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity;
 
 import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.northcoders.jv_android_retrofit_mvvm_2.R;
 import com.northcoders.jv_android_retrofit_mvvm_2.databinding.AlbumItemBinding;
 import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
 
@@ -19,6 +24,29 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
         this.albums = albums;
     }
 
+    @NonNull
+    @Override
+    public AlbumViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+
+        AlbumItemBinding binding = DataBindingUtil
+                .inflate(LayoutInflater.from(viewGroup.getContext()),
+                        R.layout.album_item,
+                        viewGroup,
+                        false);
+
+        return new AlbumViewHolder(binding);
+
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull AlbumViewHolder holder, int position) {
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return 0;
+    }
 
     public static class AlbumViewHolder extends RecyclerView.ViewHolder {
 
