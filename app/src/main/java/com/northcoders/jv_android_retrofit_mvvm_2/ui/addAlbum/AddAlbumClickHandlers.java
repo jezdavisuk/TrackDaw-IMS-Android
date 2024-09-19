@@ -11,5 +11,9 @@ public class AddAlbumClickHandlers {
     private Context context;
     private MainActivityViewModel viewModel;
 
-
+    public AddAlbumClickHandlers(Album album, Context context, MainActivityViewModel viewModel) {
+        this.album = album;
+        this.context = context;
+        this.viewModel = viewModel;
+    }
 }
