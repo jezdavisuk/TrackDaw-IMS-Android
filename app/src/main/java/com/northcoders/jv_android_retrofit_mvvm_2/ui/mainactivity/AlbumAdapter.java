@@ -14,6 +14,12 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
     private Context context;
     private ArrayList<Album> albums;
 
+    public AlbumAdapter(Context context, ArrayList<Album> albums) {
+        this.context = context;
+        this.albums = albums;
+    }
+
+
     public static class AlbumViewHolder extends RecyclerView.ViewHolder {
 
         private AlbumItemBinding albumItemBinding;
