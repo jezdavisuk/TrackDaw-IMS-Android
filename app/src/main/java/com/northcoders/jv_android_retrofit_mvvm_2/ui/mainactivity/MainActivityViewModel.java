@@ -17,7 +17,7 @@ public class MainActivityViewModel extends AndroidViewModel {
 
     public MainActivityViewModel(@NonNull Application application) {
         super(application);
-        this.albumRepository = new AlbumRepository();
+        this.albumRepository = new AlbumRepository(application);
     }
 
     public LiveData<List<Album>> getAllAlbums() {
