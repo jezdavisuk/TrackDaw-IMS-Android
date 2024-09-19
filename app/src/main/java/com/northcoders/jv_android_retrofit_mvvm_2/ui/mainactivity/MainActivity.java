@@ -8,6 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,6 +17,7 @@ import com.northcoders.jv_android_retrofit_mvvm_2.databinding.ActivityMainBindin
 import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,6 +53,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getAllAlbums() {
+
+        viewModel.getAllAlbums().observe(this, new Observer<List<Album>>() {
+
+            @Override
+            public void onChanged(List<Album> albumsFromLiveData) {
+                // albums refers to the variable name of your List of Album objects
+                // albumsFromLiveData is cast to this type
+                albums = (ArrayList<Album>) albumsFromLiveData;
+
+                // This method will be created next
+                displayInRecyclerView();
+            }
+
+        });
 
     }
 }
