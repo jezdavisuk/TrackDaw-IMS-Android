@@ -8,4 +8,5 @@
     <string name="enter_year_of_release">Enter year of release</string>
     <string name="delete">DELETE</string>
     <string name="button_update_album">Update album</string>
+    <string name="enter_genre">Enter genre</string>
 </resources>
