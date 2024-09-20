@@ -21,7 +21,7 @@ public class Album extends BaseObservable {
     int yearOfRelease;
 
     @SerializedName("genre")
-    Genre genre;
+    String genre;
 
     @SerializedName("quantityInStock")
     int quantityInStock;
@@ -32,7 +32,7 @@ public class Album extends BaseObservable {
     public Album() {
     }
 
-    public Album(Long id, String recordName, String artist, int yearOfRelease, Genre genre, int quantityInStock, boolean available) {
+    public Album(Long id, String recordName, String artist, int yearOfRelease, String genre, int quantityInStock, boolean available) {
         this.id = id;
         this.recordName = recordName;
         this.artist = artist;
@@ -83,11 +83,11 @@ public class Album extends BaseObservable {
     }
 
     @Bindable
-    public Genre getGenre() {
+    public String getGenre() {
         return genre;
     }
 
-    public void setGenre(Genre genre) {
+    public void setGenre(String genre) {
         this.genre = genre;
         notifyPropertyChanged(BR.genre);
     }
