@@ -58,6 +58,7 @@
             android:hint="@string/enter_name"
             android:inputType="text"
             android:minHeight="60dp"
+            android:autofillHints="@string/enter_album_name_autofill_hint"
             android:text="@={album.recordName}"
             android:textAlignment="gravity"
             android:textColor="#000000"
@@ -78,6 +79,7 @@
             android:gravity="center|start"
             android:hint="@string/enter_artist"
             android:minHeight="60dp"
+            android:autofillHints="@string/enter_artist_autofill_hint"
             android:text="@={album.artist}"
             android:inputType="text"
             android:textAlignment="gravity"
@@ -92,7 +94,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/editUpdateReleaseDate"
+            android:id="@+id/editUpdateYearOfRelease"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
@@ -100,6 +102,7 @@
             android:hint="@string/enter_year_of_release"
             android:inputType="text"
             android:minHeight="60dp"
+            android:autofillHints="@string/enter_year_of_release_autofill_hint"
             android:text="@={album.yearOfRelease}"
             android:textAlignment="gravity"
             android:textColor="#000000"
@@ -116,6 +119,7 @@
             android:id="@+id/editUpdateGenre"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:autofillHints="@string/enter_genre_autofill_hint"
             android:background="#FFFFFF"
             android:gravity="center|start"
             android:hint="@string/enter_genre"
@@ -129,8 +133,31 @@
             android:textStyle="normal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editUpdateReleaseDate"
+            app:layout_constraintTop_toBottomOf="@+id/editUpdateYearOfRelease"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/editUpdateQuantityInStock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/enter_quantity_in_stock_autofill_hint"
+            android:background="#FFFFFF"
+            android:gravity="center|start"
+            android:hint="@string/enter_quantity_in_stock"
+            android:inputType="text"
+            android:minHeight="60dp"
+            android:text="@={album.quantityInStock}"
+            android:textAlignment="gravity"
+            android:textColor="#000000"
+            android:textColorHint="#888282"
+            android:textSize="24sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editUpdateGenre"
             app:layout_constraintVertical_bias="0.0" />
 
 

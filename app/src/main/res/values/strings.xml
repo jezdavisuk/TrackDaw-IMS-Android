@@ -9,4 +9,13 @@
     <string name="delete">DELETE</string>
     <string name="button_update_album">Update album</string>
     <string name="enter_genre">Enter genre</string>
+    <string name="enter_quantity_in_stock">Enter quantity in stock</string>
+    <string name="enter_album_name_autofill_hint">Enter the official name given to this album on release.</string>
+    <string name="enter_artist_autofill_hint">Enter the name of the artist to whom this album is foremost attributed.</string>
+    <string name="enter_year_of_release_autofill_hint">Enter the year that this album was officially released.</string>
+    <string name="enter_genre_autofill_hint">Enter the musical genre associated with this album.</string>
+    <string name="enter_quantity_in_stock_autofill_hint">Enter the amended number of copies of this album registered in stock.</string>
+
+
+
 </resources>
