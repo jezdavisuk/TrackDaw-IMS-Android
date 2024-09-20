@@ -1,6 +1,9 @@
 package com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.northcoders.jv_android_retrofit_mvvm_2.R;
 import com.northcoders.jv_android_retrofit_mvvm_2.databinding.ActivityMainBinding;
 import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
+import com.northcoders.jv_android_retrofit_mvvm_2.ui.updatealbum.UpdateAlbumActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewInter
     private AlbumAdapter albumAdapter;
     private ActivityMainBinding binding;
     private MainActivityViewModel viewModel;
+    private static final String ALBUM_KEY = "album";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,5 +90,10 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewInter
     @Override
     public void onItemClick(int position) {
 
+        Intent intent = new Intent(MainActivity.this, UpdateAlbumActivity.class);
+
+        intent.putExtra(ALBUM_KEY, albums.get(position));
+
+        startActivity(intent);
     }
 }
