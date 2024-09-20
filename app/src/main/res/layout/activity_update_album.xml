@@ -23,7 +23,7 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Update Book"
+            android:text="@string/button_update_album"
             tools:layout_editor_absoluteX="160dp"
             tools:layout_editor_absoluteY="382dp" />
 
@@ -31,7 +31,7 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DELETE"
+            android:text="@string/delete"
             tools:layout_editor_absoluteX="161dp"
             tools:layout_editor_absoluteY="467dp" />
 
@@ -64,7 +64,7 @@
             android:textColorHint="#888282"
             android:textSize="24sp"
             android:textStyle="normal"
-            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textUpdateAlbum"
@@ -79,15 +79,38 @@
             android:hint="@string/enter_artist"
             android:minHeight="60dp"
             android:text="@={album.artist}"
+            android:inputType="text"
             android:textAlignment="gravity"
             android:textColor="#000000"
             android:textColorHint="#888282"
             android:textSize="24sp"
             android:textStyle="normal"
-            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editUpdateAlbumName"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/editUpdateReleaseDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:digits="0123456789"
+            android:gravity="center|start"
+            android:hint="@string/enter_year_of_release"
+            android:inputType="number"
+            android:minHeight="60dp"
+            android:text="@={album.yearOfRelease}"
+            android:textAlignment="gravity"
+            android:textColor="#000000"
+            android:textColorHint="#888282"
+            android:textSize="24sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editUpdateArtist"
             app:layout_constraintVertical_bias="0.0" />
 
 
