@@ -99,7 +99,8 @@ public class AlbumRepository {
 
     public void deleteAlbum(long id) {
 
-
+        AlbumApiService albumApiService = RetrofitInstance.getService();
+        Call<String> call = albumApiService.deleteAlbum(id);
 
     }
 }
