@@ -19,21 +19,32 @@
         android:layout_height="match_parent"
         tools:context=".ui.updatealbum.UpdateAlbumActivity">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submitUpdatedAlbum"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
+            android:background="#9A03A9F4"
+            android:onClick="@{clickHandler::onSubmitUpdateAlbumButtonClicked}"
             android:text="@string/button_update_album"
-            tools:layout_editor_absoluteX="160dp"
-            tools:layout_editor_absoluteY="382dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editUpdateQuantityInStock"
+            app:layout_constraintVertical_bias="0.15" />
 
-        <Button
-            android:id="@+id/button2"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonDeleteAlbum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#FF001D"
+            android:onClick="@{clickHandler::onDeleteAlbumButtonClicked}"
             android:text="@string/delete"
-            tools:layout_editor_absoluteX="161dp"
-            tools:layout_editor_absoluteY="467dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/floatingActionButton2"
+            app:layout_constraintTop_toBottomOf="@+id/submitUpdatedAlbum"
+            app:layout_constraintVertical_bias="0.20"
+            app:rippleColor="#03A9F4" />
 
         <TextView
             android:id="@+id/textUpdateAlbum"
