@@ -42,11 +42,8 @@ public class AlbumRepository {
             public void onFailure(Call<List<Album>> call, Throwable t) {
                 Log.e("HTTP Failure", Objects.requireNonNull(t.getMessage()));
             }
-
         });
-
         return mutableLiveData;
-
     }
 
     public void addNewAlbum(Album album) {
@@ -61,6 +58,7 @@ public class AlbumRepository {
                 Toast.makeText(application.getApplicationContext(),
                         "Album added to database.",
                         Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
@@ -68,11 +66,10 @@ public class AlbumRepository {
                 Toast.makeText(application.getApplicationContext(),
                         "Unable to add album to database.",
                         Toast.LENGTH_SHORT).show();
-                Log.e("POST REQ", Objects.requireNonNull(t.getMessage()));
+
+                Log.e("POST REQUEST", Objects.requireNonNull(t.getMessage()));
             }
-
         });
-
     }
 
     public void updateAlbum(long id, Album album) {
@@ -80,5 +77,23 @@ public class AlbumRepository {
         AlbumApiService albumApiService = RetrofitInstance.getService();
         Call<Album> call = albumApiService.updateAlbum(id, album);
 
+        call.enqueue(new Callback<Album>() {
+
+            @Override
+            public void onResponse(Call<Album> call, Response<Album> response) {
+                Toast.makeText(application.getApplicationContext(),
+                        "Album updated.",
+                        Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<Album> call, Throwable t) {
+                Toast.makeText(application.getApplicationContext(),
+                        "Unable to update album.",
+                        Toast.LENGTH_SHORT).show();
+
+                Log.e("PUT REQUEST", Objects.requireNonNull(t.getMessage()));
+            }
+        });
     }
 }
