@@ -74,4 +74,10 @@ public class AlbumRepository {
         });
 
     }
+
+    public void updateAlbum(long id, Album album) {
+
+
+
+    }
 }
