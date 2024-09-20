@@ -7,10 +7,10 @@
     <data>
         <variable
             name="album"
-            type="com.northcoders.jv_android_retrofit_mvvm_2.model.Album"></variable>
+            type="com.northcoders.jv_android_retrofit_mvvm_2.model.Album"/>
         <variable
             name="clickHandler"
-            type="com.northcoders.jv_android_retrofit_mvvm_2.ui.addalbum.AddAlbumClickHandlers"></variable>
+            type="com.northcoders.jv_android_retrofit_mvvm_2.ui.addalbum.AddAlbumClickHandlers"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
