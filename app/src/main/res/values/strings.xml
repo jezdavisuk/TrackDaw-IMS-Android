@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">jv-android-retrofit-mvvm-2</string>
-    <string name="add_album">Add an album</string>
+    <string name="add_album">Add new album</string>
     <string name="back_button">Back button</string>
     <string name="update_album">Update album</string>
     <string name="enter_name">Enter name</string>
     <string name="enter_artist">Enter artist</string>
     <string name="enter_year_of_release">Enter year of release</string>
     <string name="delete">DELETE</string>
+    <string name="button_add_album">Add album</string>
     <string name="button_update_album">Update album</string>
     <string name="enter_genre">Enter genre</string>
     <string name="enter_quantity_in_stock">Enter quantity in stock</string>
@@ -15,7 +16,7 @@
     <string name="enter_year_of_release_autofill_hint">Enter the year that this album was officially released.</string>
     <string name="enter_genre_autofill_hint">Enter the musical genre associated with this album.</string>
     <string name="enter_quantity_in_stock_autofill_hint">Enter the amended number of copies of this album registered in stock.</string>
-
+    <string name="revert_to_main">Revert to Main</string>
 
 
 </resources>
