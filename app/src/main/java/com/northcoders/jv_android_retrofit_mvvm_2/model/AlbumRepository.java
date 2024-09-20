@@ -4,6 +4,7 @@ import android.app.Application;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
 import com.northcoders.jv_android_retrofit_mvvm_2.service.AlbumApiService;
@@ -33,13 +34,13 @@ public class AlbumRepository {
         call.enqueue(new Callback<List<Album>>() {
 
             @Override
-            public void onResponse(Call<List<Album>> call, Response<List<Album>> response) {
+            public void onResponse(@NonNull Call<List<Album>> call, @NonNull Response<List<Album>> response) {
                 List<Album> albums = response.body();
                 mutableLiveData.setValue(albums);
             }
 
             @Override
-            public void onFailure(Call<List<Album>> call, Throwable t) {
+            public void onFailure(@NonNull Call<List<Album>> call, @NonNull Throwable t) {
                 Log.e("HTTP Failure", Objects.requireNonNull(t.getMessage()));
             }
         });
@@ -54,7 +55,7 @@ public class AlbumRepository {
         call.enqueue(new Callback<Album>() {
 
             @Override
-            public void onResponse(Call<Album> call, Response<Album> response) {
+            public void onResponse(@NonNull Call<Album> call, @NonNull Response<Album> response) {
                 Toast.makeText(application.getApplicationContext(),
                         "Album added to database.",
                         Toast.LENGTH_SHORT).show();
@@ -62,7 +63,7 @@ public class AlbumRepository {
             }
 
             @Override
-            public void onFailure(Call<Album> call, Throwable t) {
+            public void onFailure(@NonNull Call<Album> call, @NonNull Throwable t) {
                 Toast.makeText(application.getApplicationContext(),
                         "Unable to add album to database.",
                         Toast.LENGTH_SHORT).show();
@@ -80,14 +81,14 @@ public class AlbumRepository {
         call.enqueue(new Callback<Album>() {
 
             @Override
-            public void onResponse(Call<Album> call, Response<Album> response) {
+            public void onResponse(@NonNull Call<Album> call, @NonNull Response<Album> response) {
                 Toast.makeText(application.getApplicationContext(),
                         "Album updated.",
                         Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onFailure(Call<Album> call, Throwable t) {
+            public void onFailure(@NonNull Call<Album> call, @NonNull Throwable t) {
                 Toast.makeText(application.getApplicationContext(),
                         "Unable to update album.",
                         Toast.LENGTH_SHORT).show();
@@ -102,5 +103,19 @@ public class AlbumRepository {
         AlbumApiService albumApiService = RetrofitInstance.getService();
         Call<String> call = albumApiService.deleteAlbum(id);
 
+        call.enqueue(new Callback<String>() {
+
+            @Override
+            public void onResponse(@NonNull Call<String> call, @NonNull Response<String> response) {
+                Toast.makeText(application.getApplicationContext(),
+                        response.body(),
+                        Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<String> call, @NonNull Throwable t) {
+               Log.e("DELETE REQUEST", Objects.requireNonNull(t.getMessage()));
+            }
+        });
     }
 }
