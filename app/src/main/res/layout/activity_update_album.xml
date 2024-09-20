@@ -19,6 +19,41 @@
         android:layout_height="match_parent"
         tools:context=".ui.updatealbum.UpdateAlbumActivity">
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Book"
+            tools:layout_editor_absoluteX="160dp"
+            tools:layout_editor_absoluteY="382dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DELETE"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="467dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0C0303"
+            android:text="Update album"
+            android:textColor="#FF5722"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_launcher_background"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="671dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
