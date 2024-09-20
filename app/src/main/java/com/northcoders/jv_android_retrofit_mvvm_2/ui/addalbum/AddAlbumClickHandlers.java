@@ -1,4 +1,4 @@
-package com.northcoders.jv_android_retrofit_mvvm_2.ui.addAlbum;
+package com.northcoders.jv_android_retrofit_mvvm_2.ui.addalbum;
 
 import android.content.Context;
 import android.content.Intent;
