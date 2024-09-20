@@ -20,7 +20,7 @@ import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements RecyclerViewInterface {
 
     private RecyclerView recyclerView;
     private ArrayList<Album> albums;
@@ -80,5 +80,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
 
         albumAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onItemClick(int position) {
+
     }
 }
