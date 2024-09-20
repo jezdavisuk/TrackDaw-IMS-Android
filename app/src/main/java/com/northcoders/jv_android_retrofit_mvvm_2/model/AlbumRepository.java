@@ -77,7 +77,8 @@ public class AlbumRepository {
 
     public void updateAlbum(long id, Album album) {
 
-
+        AlbumApiService albumApiService = RetrofitInstance.getService();
+        Call<Album> call = albumApiService.updateAlbum(id, album);
 
     }
 }
