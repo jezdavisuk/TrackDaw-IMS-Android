@@ -19,9 +19,12 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
     private Context context;
     private ArrayList<Album> albums;
 
-    public AlbumAdapter(Context context, ArrayList<Album> albums) {
+    private final RecyclerViewInterface recyclerViewInterface;
+
+    public AlbumAdapter(Context context, ArrayList<Album> albums, RecyclerViewInterface recyclerViewInterface) {
         this.context = context;
         this.albums = albums;
+        this.recyclerViewInterface = recyclerViewInterface;
     }
 
     @NonNull
