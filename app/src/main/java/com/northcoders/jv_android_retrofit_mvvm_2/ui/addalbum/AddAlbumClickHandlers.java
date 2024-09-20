@@ -23,7 +23,7 @@ public class AddAlbumClickHandlers {
 
     public void onSubmitButtonClicked(View view) {
 
-        if (album.getRecordName() == null || album.getArtist() == null || album.getYearOfRelease() == 0 || album.getGenre() == null || album.getQuantityInStock() == 0) {
+        if (album.getRecordName() == null || album.getArtist() == null || album.getYearOfRelease() == null || album.getGenre() == null || album.getQuantityInStock() == null) {
 
             Toast.makeText(context, "Fields cannot be empty", Toast.LENGTH_SHORT).show();
 

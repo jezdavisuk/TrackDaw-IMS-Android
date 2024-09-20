@@ -18,13 +18,13 @@ public class Album extends BaseObservable {
     String artist;
 
     @SerializedName("yearOfRelease")
-    int yearOfRelease;
+    String yearOfRelease;
 
     @SerializedName("genre")
     String genre;
 
     @SerializedName("quantityInStock")
-    int quantityInStock;
+    String quantityInStock;
 
     @SerializedName("available")
     boolean available;
@@ -32,7 +32,7 @@ public class Album extends BaseObservable {
     public Album() {
     }
 
-    public Album(Long id, String recordName, String artist, int yearOfRelease, String genre, int quantityInStock, boolean available) {
+    public Album(Long id, String recordName, String artist, String yearOfRelease, String genre, String quantityInStock, boolean available) {
         this.id = id;
         this.recordName = recordName;
         this.artist = artist;
@@ -73,11 +73,11 @@ public class Album extends BaseObservable {
     }
 
     @Bindable
-    public int getYearOfRelease() {
+    public String getYearOfRelease() {
         return yearOfRelease;
     }
 
-    public void setYearOfRelease(int yearOfRelease) {
+    public void setYearOfRelease(String yearOfRelease) {
         this.yearOfRelease = yearOfRelease;
         notifyPropertyChanged(BR.yearOfRelease);
     }
@@ -93,11 +93,11 @@ public class Album extends BaseObservable {
     }
 
     @Bindable
-    public int getQuantityInStock() {
+    public String getQuantityInStock() {
         return quantityInStock;
     }
 
-    public void setQuantityInStock(int quantityInStock) {
+    public void setQuantityInStock(String quantityInStock) {
         this.quantityInStock = quantityInStock;
         notifyPropertyChanged(BR.quantityInStock);
     }
