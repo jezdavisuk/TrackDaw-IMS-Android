@@ -38,7 +38,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.AlbumViewHol
                         viewGroup,
                         false);
 
-        return new AlbumViewHolder(binding);
+        return new AlbumViewHolder(binding, recyclerViewInterface);
     }
 
     @Override
