@@ -20,7 +20,7 @@
         tools:context=".ui.updatealbum.UpdateAlbumActivity">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/submitUpdatedAlbum"
+            android:id="@+id/buttonSubmitUpdatedAlbum"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:background="#9A03A9F4"
@@ -41,8 +41,8 @@
             android:text="@string/delete"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/floatingActionButton2"
-            app:layout_constraintTop_toBottomOf="@+id/submitUpdatedAlbum"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSubmitUpdatedAlbum"
             app:layout_constraintVertical_bias="0.20"
             app:rippleColor="#03A9F4" />
 
@@ -176,11 +176,16 @@
             android:id="@+id/floatingActionButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#00BCD4"
             android:clickable="true"
             android:focusable="true"
-            app:srcCompat="@drawable/ic_launcher_background"
-            tools:layout_editor_absoluteX="2dp"
-            tools:layout_editor_absoluteY="671dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98"
+            app:srcCompat="@android:drawable/ic_menu_revert" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
