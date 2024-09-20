@@ -36,12 +36,12 @@
             tools:layout_editor_absoluteY="467dp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textUpdateAlbum"
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:background="#0C0303"
             android:gravity="center"
-            android:text="Update album"
+            android:text="@string/update_album"
             android:textColor="#FAF6F5"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -49,11 +49,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <EditText
+            android:id="@+id/editUpdateAlbumName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center|start"
+            android:hint="@string/enter_name"
+            android:minHeight="60dp"
+            android:text="@{album.recordName}"
+            android:textAlignment="gravity"
+            android:textColor="#000000"
+            android:textColorHint="#888282"
+            android:textSize="24sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textUpdateAlbum" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
+            android:focusable="true"
             app:srcCompat="@drawable/ic_launcher_background"
             tools:layout_editor_absoluteX="2dp"
             tools:layout_editor_absoluteY="671dp" />
