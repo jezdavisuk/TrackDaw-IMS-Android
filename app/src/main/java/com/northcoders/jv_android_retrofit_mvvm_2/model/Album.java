@@ -1,12 +1,16 @@
 package com.northcoders.jv_android_retrofit_mvvm_2.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 
 import com.google.gson.annotations.SerializedName;
 import com.northcoders.jv_android_retrofit_mvvm_2.BR;
 
-public class Album extends BaseObservable {
+public class Album extends BaseObservable implements Parcelable {
 
     @SerializedName("id")
     Long id;
@@ -41,6 +45,32 @@ public class Album extends BaseObservable {
         this.quantityInStock = quantityInStock;
         this.available = available;
     }
+
+    protected Album(Parcel in) {
+        if (in.readByte() == 0) {
+            id = null;
+        } else {
+            id = in.readLong();
+        }
+        recordName = in.readString();
+        artist = in.readString();
+        yearOfRelease = in.readString();
+        genre = in.readString();
+        quantityInStock = in.readString();
+        available = in.readByte() != 0;
+    }
+
+    public static final Creator<Album> CREATOR = new Creator<Album>() {
+        @Override
+        public Album createFromParcel(Parcel in) {
+            return new Album(in);
+        }
+
+        @Override
+        public Album[] newArray(int size) {
+            return new Album[size];
+        }
+    };
 
     @Bindable
     public Long getId() {
@@ -108,5 +138,26 @@ public class Album extends BaseObservable {
 
     public void setAvailable(boolean available) {
         this.available = available;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+        if (id == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeLong(id);
+        }
+        dest.writeString(recordName);
+        dest.writeString(artist);
+        dest.writeString(yearOfRelease);
+        dest.writeString(genre);
+        dest.writeString(quantityInStock);
+        dest.writeByte((byte) (available ? 1 : 0));
     }
 }
