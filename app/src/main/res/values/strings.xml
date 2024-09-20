@@ -4,4 +4,5 @@
     <string name="back_button">Back button</string>
     <string name="update_album">Update album</string>
     <string name="enter_name">Enter name</string>
+    <string name="enter_artist">Enter artist</string>
 </resources>

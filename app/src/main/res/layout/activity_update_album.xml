@@ -56,8 +56,9 @@
             android:background="#FFFFFF"
             android:gravity="center|start"
             android:hint="@string/enter_name"
+            android:inputType="text"
             android:minHeight="60dp"
-            android:text="@{album.recordName}"
+            android:text="@={album.recordName}"
             android:textAlignment="gravity"
             android:textColor="#000000"
             android:textColorHint="#888282"
@@ -66,7 +67,29 @@
             app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textUpdateAlbum" />
+            app:layout_constraintTop_toBottomOf="@+id/textUpdateAlbum"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/editUpdateArtist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center|start"
+            android:hint="@string/enter_artist"
+            android:minHeight="60dp"
+            android:text="@={album.artist}"
+            android:textAlignment="gravity"
+            android:textColor="#000000"
+            android:textColorHint="#888282"
+            android:textSize="24sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editUpdateAlbumName"
+            app:layout_constraintVertical_bias="0.0" />
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton2"
