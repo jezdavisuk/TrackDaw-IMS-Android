@@ -17,6 +17,7 @@
     <string name="enter_genre_autofill_hint">Enter the musical genre associated with this album.</string>
     <string name="enter_quantity_in_stock_autofill_hint">Enter the amended number of copies of this album registered in stock.</string>
     <string name="revert_to_main">Revert to Main</string>
+    <string name="pass_to_add_album_activity">Pass to Add Album Activity</string>
 
 
 </resources>
