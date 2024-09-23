@@ -41,7 +41,6 @@ public class AddAlbumClickHandlers {
                     album.isAvailable()
             );
 
-
             viewModel.addNewAlbum(newAlbum);
 
             context.startActivity(intent);
