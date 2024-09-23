@@ -1,6 +1,8 @@
 package com.northcoders.jv_android_retrofit_mvvm_2.ui.updatealbum;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
@@ -61,5 +63,21 @@ public class UpdateAlbumClickHandlers {
 
             context.startActivity(intent);
         }
+    }
+
+    public void onDeleteButtonClicked(View view) {
+
+        new AlertDialog.Builder(context)
+                .setTitle("Delete album")
+                .setMessage("Are you sure you want to delete this album?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(context, MainActivity.class);
+                        viewModel.deleteAlbum(album.getId());
+                        context.startActivity(intent);
+                    }
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 }
