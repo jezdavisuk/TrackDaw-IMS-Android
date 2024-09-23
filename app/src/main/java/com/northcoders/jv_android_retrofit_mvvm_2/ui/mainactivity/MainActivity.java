@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewInter
     private AlbumAdapter albumAdapter;
     private ActivityMainBinding binding;
     private MainActivityViewModel viewModel;
+    private MainActivityClickHandler clickHandler;
+
     private static final String ALBUM_KEY = "album";
 
     @Override
