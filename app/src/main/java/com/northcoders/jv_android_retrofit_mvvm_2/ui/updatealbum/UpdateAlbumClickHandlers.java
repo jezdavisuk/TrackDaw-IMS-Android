@@ -1,8 +1,11 @@
 package com.northcoders.jv_android_retrofit_mvvm_2.ui.updatealbum;
 
 import android.content.Context;
+import android.content.Intent;
+import android.view.View;
 
 import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
+import com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity.MainActivity;
 import com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity.MainActivityViewModel;
 
 public class UpdateAlbumClickHandlers {
@@ -16,5 +19,12 @@ public class UpdateAlbumClickHandlers {
         this.album = album;
         this.context = context;
         this.viewModel = viewModel;
+    }
+
+    public void onBackButtonClicked(View view) {
+
+        Intent intent = new Intent(context, MainActivity.class);
+
+        context.startActivity(intent);
     }
 }
