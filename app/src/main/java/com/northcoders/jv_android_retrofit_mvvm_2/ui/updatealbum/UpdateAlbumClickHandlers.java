@@ -3,10 +3,13 @@ package com.northcoders.jv_android_retrofit_mvvm_2.ui.updatealbum;
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
+import android.widget.Toast;
 
 import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
 import com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity.MainActivity;
 import com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity.MainActivityViewModel;
+
+import java.util.Objects;
 
 public class UpdateAlbumClickHandlers {
 
@@ -26,5 +29,37 @@ public class UpdateAlbumClickHandlers {
         Intent intent = new Intent(context, MainActivity.class);
 
         context.startActivity(intent);
+    }
+
+    public void onSubmitButtonClicked(View view) {
+
+        Album updatedAlbum = new Album(
+                album.getId(),
+                album.getRecordName(),
+                album.getArtist(),
+                album.getYearOfRelease(),
+                album.getGenre(),
+                album.getQuantityInStock(),
+                album.isAvailable()
+        );
+
+        if (Objects.equals(updatedAlbum.getRecordName(), "") ||
+                Objects.equals(updatedAlbum.getArtist(), "") ||
+                Objects.equals(updatedAlbum.getYearOfRelease(), "") ||
+                Objects.equals(updatedAlbum.getGenre(), "") ||
+                Objects.equals(updatedAlbum.getQuantityInStock(), "")) {
+
+            Toast.makeText(context, "Fields cannot be empty.", Toast.LENGTH_SHORT).show();
+
+        } else {
+
+            Intent intent = new Intent(context, MainActivity.class);
+
+            albumId = album.getId();
+
+            viewModel.updateAlbum(albumId, updatedAlbum);
+
+            context.startActivity(intent);
+        }
     }
 }
