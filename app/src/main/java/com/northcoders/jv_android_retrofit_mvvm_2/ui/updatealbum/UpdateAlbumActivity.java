@@ -9,10 +9,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.northcoders.jv_android_retrofit_mvvm_2.R;
 import com.northcoders.jv_android_retrofit_mvvm_2.databinding.ActivityUpdateAlbumBinding;
 import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
+import com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity.MainActivityViewModel;
 
 public class UpdateAlbumActivity extends AppCompatActivity {
 
@@ -42,6 +44,17 @@ public class UpdateAlbumActivity extends AppCompatActivity {
                     this,
                     R.layout.activity_update_album
             );
+
+            MainActivityViewModel viewModel = new ViewModelProvider(this)
+                    .get(MainActivityViewModel.class);
+
+            handler = new UpdateAlbumClickHandlers(
+                    album,
+                    this,
+                    viewModel
+            );
+
+            binding.setClickHandler(handler);
         }
     }
 }
