@@ -1,9 +1,7 @@
 package com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;

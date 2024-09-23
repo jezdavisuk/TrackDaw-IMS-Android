@@ -24,6 +24,8 @@ public class RetrofitInstance {
                     .client(client)
                     .build();
         }
+
+        return retrofit.create(AlbumApiService.class);
     }
 
 }
