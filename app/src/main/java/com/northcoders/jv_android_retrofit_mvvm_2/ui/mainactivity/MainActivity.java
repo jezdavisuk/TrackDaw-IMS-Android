@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewInter
         viewModel = new ViewModelProvider(this)
                 .get(MainActivityViewModel.class);
 
+        clickHandler = new MainActivityClickHandler(this);
+        binding.setClickHandler(clickHandler);
+
         getAllAlbums();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
