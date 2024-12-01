@@ -12,38 +12,30 @@ import com.jduk.app.BR;
 
 public class Album extends BaseObservable implements Parcelable {
 
-    @SerializedName("id")
+    @SerializedName("ID")
     Long id;
 
-    @SerializedName("recordName")
-    String recordName;
+    @SerializedName("NAME")
+    String albumName;
 
-    @SerializedName("artist")
-    String artist;
-
-    @SerializedName("yearOfRelease")
-    String yearOfRelease;
-
-    @SerializedName("genre")
+    @SerializedName("GENRE")
     String genre;
 
-    @SerializedName("quantityInStock")
-    String quantityInStock;
+    @SerializedName("RELEASE_DATE")
+    String releaseDate;
 
-    @SerializedName("available")
-    String available;
+    @SerializedName("IS_AGE_RESTRICTED")
+    String ageRestricted;
 
     public Album() {
     }
 
-    public Album(Long id, String recordName, String artist, String yearOfRelease, String genre, String quantityInStock, String available) {
+    public Album(Long id, String albumName, String genre, String releaseDate, String ageRestricted) {
         this.id = id;
-        this.recordName = recordName;
-        this.artist = artist;
-        this.yearOfRelease = yearOfRelease;
+        this.albumName = albumName;
         this.genre = genre;
-        this.quantityInStock = quantityInStock;
-        this.available = available;
+        this.releaseDate = releaseDate;
+        this.ageRestricted = ageRestricted;
     }
 
     protected Album(Parcel in) {
@@ -52,12 +44,10 @@ public class Album extends BaseObservable implements Parcelable {
         } else {
             id = in.readLong();
         }
-        recordName = in.readString();
-        artist = in.readString();
-        yearOfRelease = in.readString();
+        albumName = in.readString();
         genre = in.readString();
-        quantityInStock = in.readString();
-        available = in.readString();
+        releaseDate = in.readString();
+        ageRestricted = in.readString();
     }
 
     public static final Creator<Album> CREATOR = new Creator<Album>() {
@@ -83,33 +73,13 @@ public class Album extends BaseObservable implements Parcelable {
     }
 
     @Bindable
-    public String getRecordName() {
-        return recordName;
+    public String getAlbumName() {
+        return albumName;
     }
 
-    public void setRecordName(String recordName) {
-        this.recordName = recordName;
-        notifyPropertyChanged(BR.recordName);
-    }
-
-    @Bindable
-    public String getArtist() {
-        return artist;
-    }
-
-    public void setArtist(String artist) {
-        this.artist = artist;
-        notifyPropertyChanged(BR.artist);
-    }
-
-    @Bindable
-    public String getYearOfRelease() {
-        return yearOfRelease;
-    }
-
-    public void setYearOfRelease(String yearOfRelease) {
-        this.yearOfRelease = yearOfRelease;
-        notifyPropertyChanged(BR.yearOfRelease);
+    public void setAlbumName(String albumName) {
+        this.albumName = albumName;
+        notifyPropertyChanged(BR.albumName);
     }
 
     @Bindable
@@ -123,21 +93,19 @@ public class Album extends BaseObservable implements Parcelable {
     }
 
     @Bindable
-    public String getQuantityInStock() {
-        return quantityInStock;
+    public String getReleaseDate() { return releaseDate; }
+
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
+        notifyPropertyChanged(BR.releaseDate);
     }
 
-    public void setQuantityInStock(String quantityInStock) {
-        this.quantityInStock = quantityInStock;
-        notifyPropertyChanged(BR.quantityInStock);
-    }
+    @Bindable
+    public String getAgeRestricted() { return ageRestricted; }
 
-    public String isAvailable() {
-        return available;
-    }
-
-    public void setAvailable(String available) {
-        this.available = available;
+    public void setAgeRestricted(String ageRestricted) {
+        this.ageRestricted = ageRestricted;
+        notifyPropertyChanged(BR.ageRestricted);
     }
 
     @Override
@@ -153,11 +121,9 @@ public class Album extends BaseObservable implements Parcelable {
             dest.writeByte((byte) 1);
             dest.writeLong(id);
         }
-        dest.writeString(recordName);
-        dest.writeString(artist);
-        dest.writeString(yearOfRelease);
+        dest.writeString(albumName);
         dest.writeString(genre);
-        dest.writeString(quantityInStock);
-        dest.writeString(available);
+        dest.writeString(releaseDate);
+        dest.writeString(ageRestricted);
     }
 }

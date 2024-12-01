@@ -6,8 +6,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.jduk.app.model.Album;
-import com.jduk.app.ui.mainactivity.MainActivity;
-import com.jduk.app.ui.mainactivity.MainActivityViewModel;
+import com.jduk.app.ui.main.MainActivity;
+import com.jduk.app.ui.main.MainActivityViewModel;
 
 public class AddAlbumClickHandlers {
 
@@ -23,7 +23,7 @@ public class AddAlbumClickHandlers {
 
     public void onSubmitButtonClicked(View view) {
 
-        if (album.getRecordName() == null || album.getArtist() == null || album.getYearOfRelease() == null || album.getGenre() == null || album.getQuantityInStock() == null) {
+        if (album.getAlbumName() == null || album.getArtist() == null || album.getYearOfRelease() == null || album.getGenre() == null || album.getQuantityInStock() == null) {
 
             Toast.makeText(context, "Fields cannot be empty", Toast.LENGTH_SHORT).show();
 
@@ -33,7 +33,7 @@ public class AddAlbumClickHandlers {
 
             Album newAlbum = new Album(
                     album.getId(),
-                    album.getRecordName(),
+                    album.getAlbumName(),
                     album.getArtist(),
                     album.getYearOfRelease(),
                     album.getGenre(),

@@ -13,10 +13,9 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.jduk.app.R;
-import com.jduk.app.databinding.ActivityMainBinding;
 import com.jduk.app.databinding.ActivitySplashBinding;
-import com.jduk.app.ui.mainactivity.MainActivity;
-import com.jduk.app.ui.mainactivity.MainActivityViewModel;
+import com.jduk.app.ui.main.MainActivity;
+import com.jduk.app.ui.main.MainActivityViewModel;
 
 public class SplashActivity extends AppCompatActivity {
 

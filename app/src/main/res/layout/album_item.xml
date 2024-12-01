@@ -6,7 +6,7 @@
     <data>
         <variable
             name="album"
-            type="com.jduk.app.model.Album"></variable>
+            type="com.jduk.app.model.Album" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -29,7 +29,7 @@
                 android:id="@+id/albumName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{album.recordName}"
+                android:text="@{album.albumName}"
                 android:textSize="18sp"
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -37,29 +37,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/artist"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{album.artist}"
-                android:textSize="18sp"
-                android:textStyle="italic"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/year_of_release"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{album.yearOfRelease}"
-                android:textSize="18sp"
-                android:textStyle="italic"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/genre"
@@ -74,10 +51,22 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{album.releaseDate}"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
                 android:id="@+id/quantity_in_stock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{album.quantityInStock}"
+                android:text="@{album.ageRestricted}"
                 android:textSize="18sp"
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="parent"

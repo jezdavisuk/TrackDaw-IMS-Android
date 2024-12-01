@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.jduk.app.R;
 import com.jduk.app.databinding.ActivityAddNewAlbumBinding;
 import com.jduk.app.model.Album;
-import com.jduk.app.ui.mainactivity.MainActivityViewModel;
+import com.jduk.app.ui.main.MainActivityViewModel;
 
 public class AddNewAlbumActivity extends AppCompatActivity {
 

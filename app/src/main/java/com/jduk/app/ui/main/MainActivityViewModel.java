@@ -1,4 +1,4 @@
-package com.jduk.app.ui.mainactivity;
+package com.jduk.app.ui.main;
 
 import android.app.Application;
 
@@ -7,7 +7,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import com.jduk.app.model.Album;
-import com.jduk.app.model.AlbumRepository;
+import com.jduk.app.repository.AlbumRepository;
 
 import java.util.List;
 
