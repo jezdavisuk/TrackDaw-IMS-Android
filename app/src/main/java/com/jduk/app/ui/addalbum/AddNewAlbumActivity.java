@@ -1,4 +1,4 @@
-package com.northcoders.jv_android_retrofit_mvvm_2.ui.addalbum;
+package com.jduk.app.ui.addalbum;
 
 import android.os.Bundle;
 
@@ -10,10 +10,10 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.northcoders.jv_android_retrofit_mvvm_2.R;
-import com.northcoders.jv_android_retrofit_mvvm_2.databinding.ActivityAddNewAlbumBinding;
-import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
-import com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity.MainActivityViewModel;
+import com.jduk.app.R;
+import com.jduk.app.databinding.ActivityAddNewAlbumBinding;
+import com.jduk.app.model.Album;
+import com.jduk.app.ui.mainactivity.MainActivityViewModel;
 
 public class AddNewAlbumActivity extends AppCompatActivity {
 
@@ -28,11 +28,6 @@ public class AddNewAlbumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_add_new_album);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         album = new Album();
 
@@ -46,6 +41,12 @@ public class AddNewAlbumActivity extends AppCompatActivity {
         binding.setAlbum(album);
 
         binding.setClickHandler(handler);
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
     }
 
 }

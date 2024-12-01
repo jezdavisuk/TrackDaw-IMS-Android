@@ -1,4 +1,4 @@
-package com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity;
+package com.jduk.app.ui.mainactivity;
 
 public interface RecyclerViewInterface {
 

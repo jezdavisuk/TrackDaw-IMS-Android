@@ -1,13 +1,13 @@
-package com.northcoders.jv_android_retrofit_mvvm_2.ui.addalbum;
+package com.jduk.app.ui.addalbum;
 
 import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
-import com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity.MainActivity;
-import com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity.MainActivityViewModel;
+import com.jduk.app.model.Album;
+import com.jduk.app.ui.mainactivity.MainActivity;
+import com.jduk.app.ui.mainactivity.MainActivityViewModel;
 
 public class AddAlbumClickHandlers {
 
@@ -29,7 +29,7 @@ public class AddAlbumClickHandlers {
 
         } else {
 
-            Intent intent = new Intent(context, MainActivity.class);
+            Intent intent = new Intent(view.getContext(), MainActivity.class);
 
             Album newAlbum = new Album(
                     album.getId(),
@@ -38,7 +38,7 @@ public class AddAlbumClickHandlers {
                     album.getYearOfRelease(),
                     album.getGenre(),
                     album.getQuantityInStock(),
-                    album.isAvailable()
+                    "true"
             );
 
             viewModel.addNewAlbum(newAlbum);
@@ -49,7 +49,7 @@ public class AddAlbumClickHandlers {
 
     public void onBackButtonClicked(View view) {
 
-        Intent intent = new Intent(context, MainActivity.class);
+        Intent intent = new Intent(view.getContext(), MainActivity.class);
 
         context.startActivity(intent);
     }

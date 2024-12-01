@@ -1,4 +1,4 @@
-package com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity;
+package com.jduk.app.ui.mainactivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,10 +14,10 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.northcoders.jv_android_retrofit_mvvm_2.R;
-import com.northcoders.jv_android_retrofit_mvvm_2.databinding.ActivityMainBinding;
-import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
-import com.northcoders.jv_android_retrofit_mvvm_2.ui.updatealbum.UpdateAlbumActivity;
+import com.jduk.app.R;
+import com.jduk.app.databinding.ActivityMainBinding;
+import com.jduk.app.model.Album;
+import com.jduk.app.ui.updatealbum.UpdateAlbumActivity;
 
 import java.util.ArrayList;
 import java.util.List;

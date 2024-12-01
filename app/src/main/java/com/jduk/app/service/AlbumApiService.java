@@ -1,6 +1,6 @@
-package com.northcoders.jv_android_retrofit_mvvm_2.service;
+package com.jduk.app.service;
 
-import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
+import com.jduk.app.model.Album;
 
 import java.util.List;
 

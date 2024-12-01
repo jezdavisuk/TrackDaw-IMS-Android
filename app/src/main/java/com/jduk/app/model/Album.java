@@ -1,4 +1,4 @@
-package com.northcoders.jv_android_retrofit_mvvm_2.model;
+package com.jduk.app.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -8,7 +8,7 @@ import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 
 import com.google.gson.annotations.SerializedName;
-import com.northcoders.jv_android_retrofit_mvvm_2.BR;
+import com.jduk.app.BR;
 
 public class Album extends BaseObservable implements Parcelable {
 
@@ -31,12 +31,12 @@ public class Album extends BaseObservable implements Parcelable {
     String quantityInStock;
 
     @SerializedName("available")
-    boolean available;
+    String available;
 
     public Album() {
     }
 
-    public Album(Long id, String recordName, String artist, String yearOfRelease, String genre, String quantityInStock, boolean available) {
+    public Album(Long id, String recordName, String artist, String yearOfRelease, String genre, String quantityInStock, String available) {
         this.id = id;
         this.recordName = recordName;
         this.artist = artist;
@@ -57,7 +57,7 @@ public class Album extends BaseObservable implements Parcelable {
         yearOfRelease = in.readString();
         genre = in.readString();
         quantityInStock = in.readString();
-        available = in.readByte() != 0;
+        available = in.readString();
     }
 
     public static final Creator<Album> CREATOR = new Creator<Album>() {
@@ -132,11 +132,11 @@ public class Album extends BaseObservable implements Parcelable {
         notifyPropertyChanged(BR.quantityInStock);
     }
 
-    public boolean isAvailable() {
+    public String isAvailable() {
         return available;
     }
 
-    public void setAvailable(boolean available) {
+    public void setAvailable(String available) {
         this.available = available;
     }
 
@@ -158,6 +158,6 @@ public class Album extends BaseObservable implements Parcelable {
         dest.writeString(yearOfRelease);
         dest.writeString(genre);
         dest.writeString(quantityInStock);
-        dest.writeByte((byte) (available ? 1 : 0));
+        dest.writeString(available);
     }
 }

@@ -1,4 +1,4 @@
-package com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity;
+package com.jduk.app.ui.mainactivity;
 
 import android.app.Application;
 
@@ -6,8 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
-import com.northcoders.jv_android_retrofit_mvvm_2.model.AlbumRepository;
+import com.jduk.app.model.Album;
+import com.jduk.app.model.AlbumRepository;
 
 import java.util.List;
 

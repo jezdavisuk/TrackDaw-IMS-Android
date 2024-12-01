@@ -1,4 +1,4 @@
-package com.northcoders.jv_android_retrofit_mvvm_2.service;
+package com.jduk.app.service;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -9,7 +9,9 @@ public class RetrofitInstance {
 
     private static Retrofit retrofit = null;
 
-    private final static String BASE_URL = "http://10.0.2.2:8080/api/v1/";
+   // private final static String BASE_URL = "http://10.0.2.2:8080/api/v1/records/"; // if running from simulated device within Android Studio
+
+    private final static String BASE_URL = "http://192.168.1.34:8080/api/v1/records/"; // if running from real device (IP address to PC-hosted API may change)
 
     public static AlbumApiService getService() {
 
