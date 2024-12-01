@@ -11,10 +11,10 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.jduk.app.R;
+import androidx.databinding.library.baseAdapters.R;
 import com.jduk.app.databinding.ActivityUpdateAlbumBinding;
 import com.jduk.app.model.Album;
-import com.jduk.app.ui.mainactivity.MainActivityViewModel;
+import com.jduk.app.ui.main.MainActivityViewModel;
 
 public class UpdateAlbumActivity extends AppCompatActivity {
 

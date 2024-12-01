@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "jv-android-retrofit-mvvm-2"
+rootProject.name = "TrackDaw IMS App"
 include ':app'

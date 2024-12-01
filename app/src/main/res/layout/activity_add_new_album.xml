@@ -43,7 +43,7 @@
             android:hint="@string/enter_name"
             android:inputType="text"
             android:minHeight="60dp"
-            android:text="@={album.recordName}"
+            android:text="@={album.setAlbumName}"
             android:textAlignment="gravity"
             android:textColor="#000000"
             android:textColorHint="#888282"

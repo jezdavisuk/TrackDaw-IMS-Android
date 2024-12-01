@@ -1,4 +1,4 @@
-package com.jduk.app.ui.mainactivity;
+package com.jduk.app.ui.main;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,9 +15,7 @@ public class MainActivityClickHandler {
     }
 
     public void onAddAlbumClicked(View view) {
-
         Intent intent = new Intent(view.getContext(), AddNewAlbumActivity.class);
-
         context.startActivity(intent);
     }
 }

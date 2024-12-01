@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.jduk.app.model.Album;
-import com.jduk.app.ui.mainactivity.MainActivity;
-import com.jduk.app.ui.mainactivity.MainActivityViewModel;
+import com.jduk.app.ui.main.MainActivity;
+import com.jduk.app.ui.main.MainActivityViewModel;
 
 import java.util.Objects;
 
@@ -37,7 +37,7 @@ public class UpdateAlbumClickHandlers {
 
         Album updatedAlbum = new Album(
                 album.getId(),
-                album.getRecordName(),
+                album.getAlbumName(),
                 album.getArtist(),
                 album.getYearOfRelease(),
                 album.getGenre(),
@@ -45,7 +45,7 @@ public class UpdateAlbumClickHandlers {
                 album.isAvailable()
         );
 
-        if (Objects.equals(updatedAlbum.getRecordName(), "") ||
+        if (Objects.equals(updatedAlbum.getAlbumName(), "") ||
                 Objects.equals(updatedAlbum.getArtist(), "") ||
                 Objects.equals(updatedAlbum.getYearOfRelease(), "") ||
                 Objects.equals(updatedAlbum.getGenre(), "") ||
