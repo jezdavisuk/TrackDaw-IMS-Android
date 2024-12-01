@@ -1,4 +1,4 @@
-package com.northcoders.jv_android_retrofit_mvvm_2.model;
+package com.jduk.app.model;
 
 import android.app.Application;
 import android.util.Log;
@@ -7,8 +7,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
-import com.northcoders.jv_android_retrofit_mvvm_2.service.AlbumApiService;
-import com.northcoders.jv_android_retrofit_mvvm_2.service.RetrofitInstance;
+import com.jduk.app.service.AlbumApiService;
+import com.jduk.app.service.RetrofitInstance;
 
 import java.util.List;
 import java.util.Objects;

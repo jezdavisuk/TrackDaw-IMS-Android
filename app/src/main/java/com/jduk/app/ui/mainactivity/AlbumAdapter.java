@@ -1,4 +1,4 @@
-package com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity;
+package com.jduk.app.ui.mainactivity;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,9 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.northcoders.jv_android_retrofit_mvvm_2.R;
-import com.northcoders.jv_android_retrofit_mvvm_2.databinding.AlbumItemBinding;
-import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
+import com.jduk.app.R;
+import com.jduk.app.databinding.AlbumItemBinding;
+import com.jduk.app.model.Album;
 
 import java.util.ArrayList;
 

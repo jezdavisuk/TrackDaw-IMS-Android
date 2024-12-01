@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">jv-android-retrofit-mvvm-2</string>
+    <string name="app_name">TrackDaw IMS App</string>
     <string name="add_album">Add new album</string>
     <string name="back_button">Back button</string>
     <string name="update_album">Update album</string>
@@ -18,6 +18,9 @@
     <string name="enter_quantity_in_stock_autofill_hint">Enter the amended number of copies of this album registered in stock.</string>
     <string name="revert_to_main">Revert to Main</string>
     <string name="pass_to_add_album_activity">Pass to Add Album Activity</string>
-
-
+    <string name="trackdaw_title_main">TrackDaw® IMS</string>
+    <string name="trackdaw_slogan">Music on the fly</string>
+    <string name="logo_for_trackdaw_collections_description">Logo for TrackDaw Collections.</string>
+    <string name="enter">Enter</string>
+    <string name="background_visual_to_main_activity">Background Visual to Main Activity</string>
 </resources>

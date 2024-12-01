@@ -1,4 +1,4 @@
-package com.northcoders.jv_android_retrofit_mvvm_2.ui.updatealbum;
+package com.jduk.app.ui.updatealbum;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -7,9 +7,9 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
-import com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity.MainActivity;
-import com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity.MainActivityViewModel;
+import com.jduk.app.model.Album;
+import com.jduk.app.ui.mainactivity.MainActivity;
+import com.jduk.app.ui.mainactivity.MainActivityViewModel;
 
 import java.util.Objects;
 

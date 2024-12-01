@@ -6,11 +6,11 @@
     <data>
         <variable
             name="album"
-            type="com.northcoders.jv_android_retrofit_mvvm_2.model.Album"/>
+            type="com.jduk.app.model.Album"/>
 
         <variable
             name="clickHandler"
-            type="com.northcoders.jv_android_retrofit_mvvm_2.ui.updatealbum.UpdateAlbumClickHandlers" />
+            type="com.jduk.app.ui.updatealbum.UpdateAlbumClickHandlers" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

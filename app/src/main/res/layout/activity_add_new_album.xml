@@ -7,13 +7,14 @@
     <data>
         <variable
             name="album"
-            type="com.northcoders.jv_android_retrofit_mvvm_2.model.Album"/>
+            type="com.jduk.app.model.Album"/>
         <variable
             name="clickHandler"
-            type="com.northcoders.jv_android_retrofit_mvvm_2.ui.addalbum.AddAlbumClickHandlers"/>
+            type="com.jduk.app.ui.addalbum.AddAlbumClickHandlers"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.addalbum.AddNewAlbumActivity">
@@ -106,7 +107,7 @@
             android:background="#FFFFFF"
             android:gravity="center|start"
             android:hint="@string/enter_genre"
-            android:inputType="text"
+            android:inputType="text|textCapCharacters"
             android:minHeight="60dp"
             android:text="@={album.genre}"
             android:textAlignment="gravity"

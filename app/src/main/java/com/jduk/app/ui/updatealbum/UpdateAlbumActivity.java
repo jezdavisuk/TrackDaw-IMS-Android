@@ -1,4 +1,4 @@
-package com.northcoders.jv_android_retrofit_mvvm_2.ui.updatealbum;
+package com.jduk.app.ui.updatealbum;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -11,10 +11,10 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.northcoders.jv_android_retrofit_mvvm_2.R;
-import com.northcoders.jv_android_retrofit_mvvm_2.databinding.ActivityUpdateAlbumBinding;
-import com.northcoders.jv_android_retrofit_mvvm_2.model.Album;
-import com.northcoders.jv_android_retrofit_mvvm_2.ui.mainactivity.MainActivityViewModel;
+import com.jduk.app.R;
+import com.jduk.app.databinding.ActivityUpdateAlbumBinding;
+import com.jduk.app.model.Album;
+import com.jduk.app.ui.mainactivity.MainActivityViewModel;
 
 public class UpdateAlbumActivity extends AppCompatActivity {
 
